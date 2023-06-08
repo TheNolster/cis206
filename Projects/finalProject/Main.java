@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     static int minVal;
-    
+    //Find Shortest Mountain
     public static int minElevation(ArrayList <Mountain> mountains){
         minVal = mountains.get(0).getHeight();
         for(int i = 0; i < mountains.size(); ++i){
@@ -13,6 +13,8 @@ public class Main {
         return minVal;
     }
     public static void main(String [] args){
+
+        //Create data Structure
         ArrayList <Mountain> mount = new ArrayList<Mountain>();
         Mountain mountain1;
         Mountain mountain2;
@@ -22,7 +24,7 @@ public class Main {
         Mountain mountain6;
         Mountain mountain7;
 
-        //Todo add mountains
+        //Add mountains and details
         mountain1 = new Mountain();
         mountain1.setName("Chimborazo");
         mountain1.setHeight(20549);
@@ -64,12 +66,15 @@ public class Main {
         mountain7.setHeight(9719);
         mountain7.setCountry("Switzerland");
         mount.add(mountain7);
-
+        
+        // Print out all mountains and details
         for(int i = 0; i < mount.size(); ++i){
             System.out.println("Mountain: " + mount.get(i).getName()
             + ", Country: " + mount.get(i).getCountry() + ", Elevation: "
             + mount.get(i).getHeight() + " feet/" + mount.get(i).toMeters(mount.get(i).getHeight()) + " meters.\n"); 
         }
+
+        // Find shortest mountain and print
         for(int i = 0; i < mount.size(); ++i){
             if(mount.get(i).getHeight() == minElevation(mount)){
             System.out.println("\n" + mount.get(i).getName() 

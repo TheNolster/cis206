@@ -4,7 +4,8 @@ public class Mountain{
     private String mountainCountry;
     private int mountainHeight;
     private double heightInMeters;
-
+    
+    //Initial Constructor
     public Mountain(){
         mountainName = "No mountain";
         mountainCountry = "No country";
@@ -32,12 +33,11 @@ public class Mountain{
     public void setHeight(int height){
         mountainHeight = height;
     }
-    //get heigh
+    //get height
     public int getHeight(){
         return mountainHeight;
     }
-  
-     
+    //Convert to meters
     public int toMeters(int feet){
         heightInMeters = feet/3.2808;
         return (int) heightInMeters;
