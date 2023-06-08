@@ -1,10 +1,11 @@
+
 public class Mountain{
     //Variables
     private String mountainName;
     private String mountainCountry;
     private int mountainHeight;
     private double heightInMeters;
-    
+
     //Initial Constructor
     public Mountain(){
         mountainName = "No mountain";

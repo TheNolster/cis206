@@ -1,3 +1,11 @@
+/*
+ File: Main.java
+ Description: This is a program to document mountain heights and find the minimum elevation
+ Created: Thur. June 8, 2023, 16:53:14
+ Author: Nolan Bronstrup
+ email: nolanbronstrup2003@gmail.com
+*/
+
 import java.util.ArrayList;
 
 public class Main {
@@ -74,7 +82,7 @@ public class Main {
             + mount.get(i).getHeight() + " feet/" + mount.get(i).toMeters(mount.get(i).getHeight()) + " meters.\n"); 
         }
 
-        // Find shortest mountain and print
+        // Find shortest mountain and print details
         for(int i = 0; i < mount.size(); ++i){
             if(mount.get(i).getHeight() == minElevation(mount)){
             System.out.println("\n" + mount.get(i).getName() 
